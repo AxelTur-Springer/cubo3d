@@ -1,0 +1,82 @@
+html{
+    height: 100%;
+}
+body {
+   background: linear-gradient( rgb(224, 88, 88,80%), rgb(161, 161, 238, 100%));
+}
+
+.ex1 {
+    perspective: 800px;
+}
+
+.cube {
+    font-size: 4em;
+   display: flex;
+   justify-content: center;
+    width: 2em;
+    margin: 1.5em auto;
+    margin: auto;
+    margin-top: 5em;
+    transform-style: preserve-3d;
+    transform: rotateX(-45deg) rotateY(30deg);
+    animation-name: giroCubo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   background-color: black;
+}
+
+.side {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    border: 5px solid rgb(255, 255, 255);
+    text-align: center;
+    line-height: 2em;
+    border-radius: 10px;
+    animation-name: cuboColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: linear-gradient( rgb(224, 88, 88), rgb(161, 161, 238));
+}
+
+.front {
+    transform:rotateX(10deg) translateZ(2em);
+    
+}
+
+.top {
+    transform: rotateX(100deg) translateZ(2em);
+}
+
+.right {
+    transform:rotateX(10deg) rotateY(90deg) translateZ(2em);
+}
+
+.left {
+    transform:rotateX(10deg) rotateY(-90deg) translateZ(2em);
+}
+
+.bottom {
+    transform: rotateX(-80deg) translateZ(2em);
+}
+
+.back {
+    transform:rotateX(10deg) rotateY(-180deg) translateZ(2em);
+}
+
+@keyframes giroCubo {
+    0%  {transform: rotateY(0deg);}
+    100%  {transform: rotateY(360deg);}
+ 
+
+} 
+
+@keyframes cuboColor {
+  100% {
+      transform: rotate3d(40deg);
+  }
+
+
+}
